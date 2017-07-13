@@ -22,13 +22,26 @@ var convertNumToRom = function(numbers) {
     }
   }
 
+//Subtraction area
 var counter = 1;
 for (var i = 1; i < roman.length; i++) {
   if (roman[i] === roman[i-1]) {
     counter++;
+  } else {
+    counter = 1;
   }
   if (counter >= 4) {
     roman.splice(i - 2, 3, romanSymbols[(romanSymbols.indexOf(roman[i])) - 1]);
+    counter = 1;
+  }
+}
+
+//Fixing incorrect subtraction area
+for (var i = 0; i < roman.length; i++) {
+  if (roman[i] === roman[i+2] && roman[i] !== roman[i+1]) {
+    roman[i+2] = romanSymbols[romanSymbols.indexOf(roman[i]) - 1];
+    roman.splice(i, 1);
+    i++;
   }
 }
 
