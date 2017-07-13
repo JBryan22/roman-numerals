@@ -20,11 +20,6 @@ _This webpage converts numbers from 1 - 3,999 into Roman numerals. _
 * _Download Bootstrap or use Bootstrap CDN_
 * _Download jQuery or use jQuery CDN_
 
-
-## Support and contact details
-
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
-
 ## Technologies Used
 
 _HTML_
