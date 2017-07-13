@@ -10,7 +10,9 @@ var romanSymbols = ['M', 'D', 'C', 'L', 'X', 'V', 'I'];
 var romanValues = [1000, 500, 100, 50, 10, 5, 1];
 
 var convertNumToRom = function(numbers) {
-  // if number too big
+  if (numbers >= 4000 || numbers < 1) {
+    return "Please enter a number between 1 and 3,999";
+  }
   var index = 0;
   var roman = [];
   while (index < romanValues.length) {
